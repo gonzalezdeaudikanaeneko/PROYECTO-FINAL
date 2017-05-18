@@ -1,18 +1,18 @@
 /*
- * Trabajador.cpp
+ * Director.cpp
  *
  *  Created on: 18 de may. de 2017
  *      Author: Txus
  */
 
-#include "Trabajador.h"
+#include "Director.h"
 
-Trabajador::Trabajador() {
+Director::Director() {
 	// TODO Auto-generated constructor stub
 
 }
 
-Trabajador::~Trabajador() {
+Director::~Director() {
 	// TODO Auto-generated destructor stub
 }
 
