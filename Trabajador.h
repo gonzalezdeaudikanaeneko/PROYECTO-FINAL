@@ -10,7 +10,10 @@
 
 class Trabajador {
 public:
-
+	char *nombre;
+	char *contrasena;
+	int edad;
+	int Id_Trabajador;
 	Trabajador();
 	virtual ~Trabajador();
 };
