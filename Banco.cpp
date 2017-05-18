@@ -165,8 +165,7 @@ void Banco::LeerFichero() {
 //		archivo += linea + "\n";
 //    }
 
-	while (getline(file, linea))
-		archivo += linea + "\n";
+	while (getline(file, linea))		archivo += linea + "\n";
 	cout << archivo;
 
 

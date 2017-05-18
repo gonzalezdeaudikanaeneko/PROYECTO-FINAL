@@ -10,6 +10,7 @@
 
 class Trabajador {
 public:
+
 	Trabajador();
 	virtual ~Trabajador();
 };
