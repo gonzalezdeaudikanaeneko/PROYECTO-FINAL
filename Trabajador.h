@@ -12,6 +12,7 @@ class trabajador{
 
 
 private:
+	char unaiEsUnCapullo;
 };
 
 
