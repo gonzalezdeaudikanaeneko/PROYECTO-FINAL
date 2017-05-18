@@ -20,35 +20,45 @@ using namespace std;
 
 int main(void) {
 	char funcMenu;
+	char resultado;
 	bool repetir;
 	Cuenta* n;
 	string  statement;
 	string result;
-	Funciones c;
 	int noticia;
 	do {
 		repetir = true;
-		funcMenu = c.mostrarMenu();
-		switch (funcMenu) {
+		printf("MENU PRINCIPAL\n"
+				"1.\tTRABAJADOR\n"
+				"2.\tCLIENTE\n"
+				"3.\tSALIR\n"
+				"Introduzca numero de la funcion deseada:\n");
+		fflush(stdout);
+		resultado = getchar();
+		fflush(stdin);
+		switch (resultado) {
 		case '1':
 		{
-//			statement = "SELECT * from XML;";
-//			const char *csql2 = statement.c_str();
-//			char *csql3=(char*) csql2;
-//			ejecutarComandoBD(csql3);
-//			printf("Introduce COD_XML del archivo: \n");
-//			fflush(stdout);
-//			char nombre[20];
-//			scanf("%s", nombre);
-//			fflush(stdin);
-//			printf("%s", nombre);
-//			statement = "SELECT * from NOTICIA where cod_xml like '";
-//			statement.append(nombre);
-//			statement.append("';");
-//			csql2 = statement.c_str();
-//			csql3=(char*) csql2;
-//			ejecutarComandoBD(csql3);
-//			printf("\n");
+			printf("Opcion 1");
+			statement = "SELECT * from CUENTA;";
+			const char *csql2 = statement.c_str();
+			char *csql3=(char*) csql2;
+//			ejecutarComando(csql3);
+//			ejecutarComando(csql3);
+			printf("Introduce DNI del titular de la cuenta: \n");
+			fflush(stdout);
+			char dni[10];
+			scanf("%s", dni);
+			fflush(stdin);
+			printf("%s", dni);
+			statement = "SELECT * from CUENTA where DNI like '";
+			statement.append(dni);
+			statement.append("';");
+			csql2 = statement.c_str();
+			csql3=(char*) csql2;
+//			ejecutarComando(csql3);
+			printf("\n");
+
 			}
 			break;
 		case '2':{
@@ -151,7 +161,7 @@ int main(void) {
 //			}
 //			}while(repetir2);
 //
-//			break;
+			break;
 		}
 		case '3':
 		{

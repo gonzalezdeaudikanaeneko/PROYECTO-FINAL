@@ -16,10 +16,13 @@ public:
 	virtual ~Funciones();
 	//int callback(void *NotUsed, int argc, char **argv, char **azColName);
 	int callback(void *NotUsed, int argc, char **argv, char **azColName);
-	int ejecutarComandoBD( char * statement);
+	int ejecutarComandoBD(char * statement);
+	void ejecutarComando(char * statement);
 	void cerrarBD(sqlite3* db);
 	char mostrarMenu() ;
 	void abrirBD();
+	char mostrarMenuTrabajador();
+	char mostrarMenuCliente();
 };
 
 #endif /* FUNCIONES_H_ */

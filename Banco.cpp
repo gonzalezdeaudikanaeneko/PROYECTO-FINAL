@@ -152,13 +152,22 @@ void Banco::transaccion(Cuenta * CuentasB, int cliA, int cliB, int cant) {
 void Banco::LeerFichero() {
 	cout << "Escriba el nombre del archivo a leer: " << endl;
 	string filename;
+//	char *str;
+//	int i;
 	cin >> filename;
 	ifstream file(filename.c_str());
 	if (!file) {
 		cout << "Error no se puede abrir el archivo: " << filename << endl;
 	}
 	string linea, archivo;
+
+//    for(i=0; str[i]!=' ' && str[i] == '_';i++){
+//		archivo += linea + "\n";
+//    }
+
 	while (getline(file, linea))
 		archivo += linea + "\n";
 	cout << archivo;
+
+
 }
