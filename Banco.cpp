@@ -7,6 +7,9 @@
 
 #include "Banco.h"
 #include "Cuenta.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <list>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -27,20 +30,20 @@ Banco::~Banco() {
 }
 
 
-void Banco::anadirCuenta(Cuenta * CuentasB, float liq, int cli) {
+void Banco::anadirCuenta(list<Cuenta*>* CuentasB, float liq, int cli) {
 
 	Cuenta c;//(555, "Pedro Aguado", (c.numCuentas+1), cli);
 	c.setLiquidacion(liq);
 	c.setNombre("Halo");
-	CuentasB[CuentasB->getNumeroCuentas()] = c;
+	CuentasB[CuentasB] = c;
 	cout << "Exito\n";
 }
 
-void Banco::buscarCuenta(Cuenta * CuentasB, int cli) {
+void Banco::buscarCuenta(list<Cuenta*>* CuentasB, int cli) {
 
 	int i = 0, enc = 0;
-	while (enc == 0 && i < CuentasB->getNumeroCuentas()) {
-		if (CuentasB[CuentasB->getNumeroCuentas()].getNumeroId() == cli) {
+	while (enc == 0 && i < CuentasB->size()) {
+		if (CuentasB[i].getNumeroId() == cli) {
 			enc = 1; // en C no existen boolean, por lo tanto cuando queramos usar lo que en java correspondería a un boolean usaremos un int, la similitud sería 1 = true y 0 = false.
 		} else {
 			i++;
@@ -58,7 +61,7 @@ void Banco::buscarCuenta(Cuenta * CuentasB, int cli) {
 	}
 }
 
-Cuenta Banco::buscarCuenta1(Cuenta * CuentasB, int cli) {
+Cuenta Banco::buscarCuenta1(list<Cuenta*>* CuentasB, int cli) {
 
 	int i = 0, enc = 0;
 	while (enc == 0 && i < CuentasB->getNumeroCuentas()) {
@@ -71,7 +74,7 @@ Cuenta Banco::buscarCuenta1(Cuenta * CuentasB, int cli) {
 	return CuentasB[i];
 }
 
-void Banco::actualizarCuenta(Cuenta * CuentasB, int cli, Cuenta c) {
+void Banco::actualizarCuenta(list<Cuenta*>* CuentasB, int cli, Cuenta c) {
 
 	int i = 0, enc = 0;
 	while (enc == 0 && i < CuentasB->getNumeroCuentas()) {
@@ -82,7 +85,7 @@ void Banco::actualizarCuenta(Cuenta * CuentasB, int cli, Cuenta c) {
 	}
 }
 
-int Banco::existeCuenta(Cuenta * CuentasB, int cli) {
+int Banco::existeCuenta(list<Cuenta*>* CuentasB, int cli) {
 
 	int i = 0, enc = 0;
 	while (enc == 0 && i < CuentasB->getNumeroCuentas()) {
@@ -95,7 +98,7 @@ int Banco::existeCuenta(Cuenta * CuentasB, int cli) {
 	return enc;
 }
 
-void Banco::eliminarCuenta1(Cuenta * CuentasB, int cli) { //funciona
+void Banco::eliminarCuenta1(list<Cuenta*>* CuentasB, int cli) { //funciona
 	int i = 0, enc = 0;
 	while (enc == 0 && i < CuentasB->getNumeroCuentas()) {
 		if (CuentasB[i].getNumeroId() == cli) {
@@ -119,7 +122,7 @@ void Banco::eliminarCuenta1(Cuenta * CuentasB, int cli) { //funciona
 	}
 
 }
-void Banco::transaccion(Cuenta * CuentasB, int cliA, int cliB, int cant) {
+void Banco::transaccion(list<Cuenta*>* CuentasB, int cliA, int cliB, int cant) {
 
 	int i = 0, j = 0;
 	int t = 0, t1 = 0;
@@ -166,6 +169,7 @@ void Banco::LeerFichero() {
 //		archivo += linea + "\n";
 //    }
 
+<<<<<<< HEAD
 	while (getline(file, linea)){
 //		archivo += linea + "\n";
 		for(i=0; str[i] != '_';i++){
@@ -176,6 +180,9 @@ void Banco::LeerFichero() {
 		}
 		arch[i];
 	}
+=======
+	while (getline(file, linea))		archivo += linea + "\n";
+>>>>>>> branch 'master' of https://github.com/gonzalezdeaudikanaeneko/PROYECTO-FINAL.git
 	cout << archivo;
 
 

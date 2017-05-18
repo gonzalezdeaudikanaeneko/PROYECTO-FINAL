@@ -8,10 +8,14 @@
 #ifndef TRABAJADOR_H_
 #define TRABAJADOR_H_
 
-class trabajador{
-
-
-private:
+class Trabajador {
+public:
+	char *nombre;
+	char *contrasena;
+	int edad;
+	int Id_Trabajador;
+	Trabajador();
+	virtual ~Trabajador();
 
 };
 

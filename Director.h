@@ -7,9 +7,12 @@
 
 #ifndef DIRECTOR_H_
 #define DIRECTOR_H_
+#include "Trabajador.h"
 
-class Director {
+class Director : public Trabajador
+{
 public:
+
 	Director();
 	virtual ~Director();
 };

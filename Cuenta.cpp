@@ -10,13 +10,12 @@
 #include "string.h"
 using namespace std;
 
-Cuenta::Cuenta(const int nIdent, const char *nombre, int numCuentas,
+Cuenta::Cuenta(const int nIdent, const char *nombre,
 		int ID_Cuenta, char* cont) {
 	// TODO Auto-generated constructor stub
 	this->nIdent = nIdent;
 	this->nombre = new char[strlen(nombre) + 1];
 	strcpy(this->nombre, nombre);
-	this->numCuentas = numCuentas;
 	this->ID_Cuenta = ID_Cuenta;
 	this->liq = 0;
 	this->contrasena = cont;
@@ -26,7 +25,6 @@ Cuenta::Cuenta(const Cuenta &c) {
 	this->nIdent = c.nIdent;
 	this->nombre = new char[strlen(c.nombre) + 1];
 	strcpy(this->nombre, c.nombre);
-	this->numCuentas = c.numCuentas;
 	this->ID_Cuenta = c.ID_Cuenta;
 	this->liq = c.liq;
 	this->contrasena = new char[strlen(c.contrasena) + 1];
@@ -51,9 +49,6 @@ char* Cuenta::getNombre(){
 char* Cuenta::getContrasena(){
 	return contrasena;
 }
-int Cuenta::getNumeroCuentas(){
-	return numCuentas;
-}
 
 void Cuenta::setNumeroId(int a){
 	this->nIdent=a;
@@ -67,6 +62,4 @@ void Cuenta::setNombre(char* a){
 void Cuenta::setContrasena(char* a){
 	this->contrasena = a;
 }
-void Cuenta::setNumeroCuentas(int a){
-	this->numCuentas = a;
-}
+
