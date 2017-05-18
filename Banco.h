@@ -10,7 +10,7 @@
 #include "Cuenta.h"
 
 class Banco {
-//
+
 private:
 
 	char *nombre;
