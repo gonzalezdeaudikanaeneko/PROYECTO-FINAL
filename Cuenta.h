@@ -11,12 +11,12 @@
 class Cuenta {
 private:
 
-	int nIdent;
-	char *nombre;
-	int ID_Cuenta;
-	float liq;
-	int numCuentas;
-	char *contrasena;
+	int nIdent;			//Numero de persona
+	char *nombre;		//Nombre de persona
+	int ID_Cuenta;		//Numero identificativo de la cuenta
+	float liq;			//Liquided de la cuenta
+	int numCuentas;		//El numero de cuentas por persona
+	char *contrasena;	//Contraseña del usuario
 
 public:
 

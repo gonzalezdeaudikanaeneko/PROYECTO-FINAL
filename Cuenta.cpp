@@ -37,6 +37,7 @@ Cuenta::Cuenta() {
 }
 Cuenta::~Cuenta() {
 	// TODO Auto-generated destructor stub
+	delete[]this->ID_Cuenta;
 }
 int Cuenta::getNumeroId(){
 	return nIdent;

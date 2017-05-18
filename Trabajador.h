@@ -8,10 +8,13 @@
 #ifndef TRABAJADOR_H_
 #define TRABAJADOR_H_
 
-class Trabajador {
-public:
-	Trabajador();
-	virtual ~Trabajador();
+class trabajador{
+
+
+private:
+
 };
+
+
 
 #endif /* TRABAJADOR_H_ */
